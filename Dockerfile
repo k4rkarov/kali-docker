@@ -19,9 +19,10 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 RUN go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest || true && \
     go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest || true && \
     go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest || true && \
-    go install github.com/projectdiscovery/katana/cmd/katana@latest || true && \
+    go install -v github.com/projectdiscovery/katana/cmd/katana@latest || true && \
     go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest || true && \
-    go install github.com/lc/gau/v2/cmd/gau@latest || true
+    go install -v github.com/k4rkarov/entropy/cmd/entropy@latest || true && \
+    go install -v github.com/lc/gau/v2/cmd/gau@latest || true
 
 # Cleanup
 RUN apt-get clean && \
